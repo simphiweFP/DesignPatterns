@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignsPattern", "DesignsPattern\DesignsPattern.csproj", "{122D0FB5-71AF-4818-AFA7-C2F73FA6C00D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignsPattern", "DesignsPattern\DesignsPattern.csproj", "{122D0FB5-71AF-4818-AFA7-C2F73FA6C00D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignsPattern.Creational", "DesignsPattern.Creatinal\DesignsPattern.Creational.csproj", "{5DAF873F-0F82-4DEF-8C74-DD4E810FE569}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignsPattern.Creational", "DesignsPattern.Creatinal\DesignsPattern.Creational.csproj", "{5DAF873F-0F82-4DEF-8C74-DD4E810FE569}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignsPattern.Utils", "DesignsPattern.Utils\DesignsPattern.Utils.csproj", "{130C01A9-B9CF-4EC1-98F8-38C90189B2AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignsPattern.Utils", "DesignsPattern.Utils\DesignsPattern.Utils.csproj", "{130C01A9-B9CF-4EC1-98F8-38C90189B2AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignsPattern.Structural", "DesignsPattern.Structural\DesignsPattern.Structural.csproj", "{3EE33BCC-4B60-4CFE-A2D8-2F4A1717161D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{130C01A9-B9CF-4EC1-98F8-38C90189B2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{130C01A9-B9CF-4EC1-98F8-38C90189B2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{130C01A9-B9CF-4EC1-98F8-38C90189B2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE33BCC-4B60-4CFE-A2D8-2F4A1717161D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE33BCC-4B60-4CFE-A2D8-2F4A1717161D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE33BCC-4B60-4CFE-A2D8-2F4A1717161D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE33BCC-4B60-4CFE-A2D8-2F4A1717161D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
