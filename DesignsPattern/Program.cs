@@ -9,6 +9,7 @@ using DesignsPattern.Utils.Display;
 using Spectre.Console;
 using Rule = Spectre.Console.Rule;
 using Color = Spectre.Console.Color;
+using DesignsPattern.Structural.Adapter;
 
 MainTitle();
 
@@ -142,7 +143,7 @@ void HandleStructuralPattern()
         switch (structuralChoice)
         {
             case "Adapter":
-                //RunAdapter();
+                RunAdapter();
                 break;
             case "Bridge":
                 //RunBridge();
@@ -290,6 +291,30 @@ void RunSingletonFactory()
                 break;
             }
             singleton.Run();
+        }
+    }
+}
+void RunAdapter()
+{
+    var adapter = new Adapter(new ConsoleOutput());
+    var exit = false;
+    while (!exit)
+    {
+        var option = AnsiConsole.Prompt(
+            new SelectionPrompt<string>()
+                .Title("Please choose option:")
+                .PageSize(10)
+                .AddChoices(new[] {
+                    "Search Person Details", "Back"
+                }));
+        if (!string.IsNullOrEmpty(option))
+        {
+            if (option.ToLower() == "back")
+            {
+                exit = true;
+                break;
+            }
+            adapter.Run(option);
         }
     }
 }

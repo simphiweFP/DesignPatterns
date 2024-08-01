@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DesignsPattern.Creatinal\DesignsPattern.Creational.csproj" />
+    <ProjectReference Include="..\DesignsPattern.Structural\DesignsPattern.Structural.csproj" />
   </ItemGroup>
 
 </Project>
