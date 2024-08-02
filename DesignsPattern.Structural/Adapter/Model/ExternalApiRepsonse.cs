@@ -10,7 +10,6 @@ namespace DesignsPattern.Structural.Adapter.Model
     {
         public string GetPersonDetailsXml(double id)
         {
-            // Simulate an XML response from an API based on the ID
             return $"<person><id>{id}</id><name>Sim Dlamuka</name><age>30</age></person>";
         }
     }

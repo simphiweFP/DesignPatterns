@@ -20,10 +20,8 @@ namespace DesignsPattern.Structural.Adapter
 
         public string GetPersonDetails(double id)
         {
-            // Request the person details from the external API
             string xmlResponse = _externalApiResponse.GetPersonDetailsXml(id);
 
-            // Convert the XML response to JSON
             XDocument xmlDocument = XDocument.Parse(xmlResponse);
             string jsonResponse = JsonConvert.SerializeXNode(xmlDocument);
 
