@@ -10,6 +10,7 @@ using Spectre.Console;
 using Rule = Spectre.Console.Rule;
 using Color = Spectre.Console.Color;
 using DesignsPattern.Structural.Adapter;
+using DesignsPattern.Structural.Bridge;
 
 MainTitle();
 
@@ -146,7 +147,7 @@ void HandleStructuralPattern()
                 RunAdapter();
                 break;
             case "Bridge":
-                //RunBridge();
+                RunBridger();
                 break;
             case "Composite":
                 //RunComposite();
@@ -315,6 +316,30 @@ void RunAdapter()
                 break;
             }
             adapter.Run(option);
+        }
+    }
+}
+void RunBridger()
+{
+    var Bridger = new Bridger(new ConsoleOutput());
+    var exit = false;
+    while (!exit)
+    {
+        var option = AnsiConsole.Prompt(
+            new SelectionPrompt<string>()
+                .Title("Please choose option:")
+                .PageSize(10)
+                .AddChoices(new[] {
+                    "Funeral","Life", "Back"
+                }));
+        if (!string.IsNullOrEmpty(option))
+        {
+            if (option.ToLower() == "back")
+            {
+                exit = true;
+                break;
+            }
+            Bridger.Run(option);
         }
     }
 }
