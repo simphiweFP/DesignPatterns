@@ -8,6 +8,8 @@ namespace DesignsPattern.Structural.Bridge
 {
     public interface IPolicy
     {
-        void BuyPolicy();
+        void BuyStandardPolicy();
+        void BuyBasicPolicy();
+        void BuyFullPolicy();
     }
 }

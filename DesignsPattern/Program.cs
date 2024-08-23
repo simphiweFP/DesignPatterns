@@ -330,7 +330,7 @@ void RunBridger()
                 .Title("Please choose option:")
                 .PageSize(10)
                 .AddChoices(new[] {
-                    "Funeral","Life", "Back"
+                    "Buy Policy","Back"
                 }));
         if (!string.IsNullOrEmpty(option))
         {

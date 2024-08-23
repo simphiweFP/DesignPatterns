@@ -8,9 +8,19 @@ namespace DesignsPattern.Structural.Bridge
 {
     public class LifePolicy : IPolicy
     {
-        public void BuyPolicy()
+        public void BuyStandardPolicy()
         {
-            Console.WriteLine("Buy Life.");
+            Console.WriteLine("Buy Standard Life Policy.");
+        }
+
+        public void BuyBasicPolicy()
+        {
+            Console.WriteLine("Buy Basic Life Policy.");
+        }
+
+        public void BuyFullPolicy()
+        {
+            Console.WriteLine("Buy Full Life Policy.");
         }
     }
 }

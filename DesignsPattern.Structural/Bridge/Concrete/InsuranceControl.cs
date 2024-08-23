@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignsPattern.Structural.Bridge
+namespace DesignsPattern.Structural.Bridge.Concrete
 {
     public abstract class InsuranceControl
     {
@@ -15,5 +15,19 @@ namespace DesignsPattern.Structural.Bridge
             this.policy = policy;
         }
 
+        public void Buy()
+        {
+            policy.BuyStandardPolicy();
+        }
+
+        public void BuyBasic()
+        {
+            policy.BuyBasicPolicy();
+        }
+
+        public void BuyFull()
+        {
+            policy.BuyFullPolicy();
+        }
     }
 }

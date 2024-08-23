@@ -9,9 +9,19 @@ namespace DesignsPattern.Structural.Bridge
 {
     public class FuneralPolicy : IPolicy
     {
-        public void BuyPolicy()
+        public void BuyStandardPolicy()
         {
-            Console.WriteLine("Buy Funeral.");
+            Console.WriteLine("Buy Standard Funeral Policy.");
+        }
+
+        public void BuyBasicPolicy()
+        {
+            Console.WriteLine("Buy Basic Funeral Policy.");
+        }
+
+        public void BuyFullPolicy()
+        {
+            Console.WriteLine("Buy Full Funeral Policy.");
         }
     }
 }
