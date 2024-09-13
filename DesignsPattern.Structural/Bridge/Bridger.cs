@@ -21,28 +21,26 @@ namespace DesignsPattern.Structural.Bridge
 
         public void Run(string option)
         {
-       
-               // Step 1: Select the Policy
-          _output.Display("Select a policy type:");
+            _output.Display("Select a policy type:");
             _output.Display("1. Funeral Policy");
             _output.Display("2. Life Policy");
             Console.Write("Enter your choice (1 or 2): ");
-               option  = Console.ReadLine();
+            option = Console.ReadLine();
 
-            IPolicy policy = null;
+            object policy = null;
             InsuranceControl control = null;
 
             switch (option)
             {
                 case "1":
                     policy = new FuneralPolicy();
-                    control = new FuneralPolicyControl(policy);
+                    control = new FuneralPolicyControl((FuneralPolicy)policy);
                     _output.Display("Funeral Policy selected.");
                     break;
 
                 case "2":
                     policy = new LifePolicy();
-                    control = new LifePolicyControl(policy);
+                    control = new LifePolicyControl((LifePolicy)policy);
                     _output.Display("Life Policy selected.");
                     break;
 
@@ -50,7 +48,7 @@ namespace DesignsPattern.Structural.Bridge
                     _output.Display("Invalid option.");
                     return;
             }
-            // Step 2: Select the Action
+
             _output.Display("Select an action:");
             _output.Display("1. Standard Policy");
             _output.Display("2. Basic Policy");
@@ -78,4 +76,5 @@ namespace DesignsPattern.Structural.Bridge
             }
         }
     }
+
 }

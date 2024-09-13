@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesignsPattern.Structural.Bridge
 {
-    public class FuneralPolicy : IPolicy
+    public class FuneralPolicy 
     {
         public void BuyStandardPolicy()
         {

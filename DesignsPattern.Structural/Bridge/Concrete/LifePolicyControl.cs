@@ -8,7 +8,7 @@ namespace DesignsPattern.Structural.Bridge.Concrete
 {
     public class LifePolicyControl : InsuranceControl
     {
-        public LifePolicyControl(IPolicy policy) : base(policy) { }
+        public LifePolicyControl(LifePolicy policy) : base(policy) { }
 
         public void BuyLifePolicy()
         {
@@ -16,4 +16,5 @@ namespace DesignsPattern.Structural.Bridge.Concrete
             Buy();
         }
     }
+
 }

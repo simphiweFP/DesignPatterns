@@ -9,11 +9,12 @@ namespace DesignsPattern.Structural.Bridge
 {
     public class FuneralPolicyControl : InsuranceControl
     {
-        public FuneralPolicyControl(IPolicy policy) : base(policy) { }
+        public FuneralPolicyControl(FuneralPolicy policy) : base(policy) { }
 
         public void BuyFuneralPolicy()
         {
             Buy();
         }
     }
+
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignsPattern.Structural.Bridge
 {
-    public class LifePolicy : IPolicy
+    public class LifePolicy 
     {
         public void BuyStandardPolicy()
         {

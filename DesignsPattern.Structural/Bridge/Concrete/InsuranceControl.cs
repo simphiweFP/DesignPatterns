@@ -8,26 +8,30 @@ namespace DesignsPattern.Structural.Bridge.Concrete
 {
     public abstract class InsuranceControl
     {
-        protected IPolicy policy;
+        protected object policy; // Use object type for generalization
 
-        public InsuranceControl(IPolicy policy)
+        public InsuranceControl(object policy)
         {
             this.policy = policy;
         }
 
         public void Buy()
         {
-            policy.BuyStandardPolicy();
+            // Use reflection to call BuyStandardPolicy()
+            policy.GetType().GetMethod("BuyStandardPolicy")?.Invoke(policy, null);
         }
 
         public void BuyBasic()
         {
-            policy.BuyBasicPolicy();
+            // Use reflection to call BuyBasicPolicy()
+            policy.GetType().GetMethod("BuyBasicPolicy")?.Invoke(policy, null);
         }
 
         public void BuyFull()
         {
-            policy.BuyFullPolicy();
+            // Use reflection to call BuyFullPolicy()
+            policy.GetType().GetMethod("BuyFullPolicy")?.Invoke(policy, null);
         }
     }
+
 }
