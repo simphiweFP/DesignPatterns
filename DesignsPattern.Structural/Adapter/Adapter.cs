@@ -22,20 +22,14 @@ namespace DesignsPattern.Structural.Adapter
             switch (option)
             {
                 case "Search Person Details":
-                    // Create an instance of the external XML API service
                     ExternalApiRepsonse externalApiService = new ExternalApiRepsonse();
-
-                    // Create an instance of the adapter
                     IPersonService personService = new PersonServiceAdapter(externalApiService);
 
-                    // Get the ID from the user
                     Console.WriteLine("Enter the ID:");
                     double id = Convert.ToDouble(Console.ReadLine());
 
-                    // Get the person details
                     string personDetailsJson = personService.GetPersonDetails(id);
 
-                    // Display the person details in JSON format
                     _output.Display("Person Details in JSON format:");
                     _output.Display(personDetailsJson);
                     break;
